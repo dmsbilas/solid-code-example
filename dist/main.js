@@ -12,4 +12,7 @@ areaCalculator.CalculateArea(smallCircle).then((area) => {
 areaCalculator.CalculateArea(smallRectangle).then((area) => {
     console.log(area);
 });
+areaCalculator.ShowCircleRadius(smallCircle).then((r) => {
+    console.log(r);
+});
 //# sourceMappingURL=main.js.map

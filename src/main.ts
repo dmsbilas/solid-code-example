@@ -18,3 +18,6 @@ areaCalculator.CalculateArea(smallRectangle).then((area)=>{
     console.log(area);
 });
 
+areaCalculator.ShowCircleRadius(smallCircle).then((r)=>{
+console.log(r);
+});

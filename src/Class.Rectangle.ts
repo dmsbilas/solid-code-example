@@ -7,10 +7,10 @@ export class Rectangle{
         this.height = height;
     }
 
-    GetArea(){
-        return new Promise((resolve, reject)=>{
-            resolve(this.width*this.height);
-        });
-    }
+    // GetArea(){
+    //     return new Promise((resolve, reject)=>{
+    //         resolve(this.width*this.height);
+    //     });
+    // }
 
 }

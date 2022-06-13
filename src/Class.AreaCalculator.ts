@@ -4,24 +4,24 @@ import { Rectangle } from "./Class.Rectangle";
 
 export class AreaCalculator {
 
+    circle : Circle = new Circle(0);
+
     async CalculateArea(Shape) {
         return new Promise(async (resolve, reject) => {
-            console.log(Shape);
-
-            // if (typeof (Shape) === typeof (new Circle(0))) {
-            //     resolve(await Shape.GetArea());
-            // }
-
-            // if (typeof (Shape) === typeof (new Rectangle(0, 0))) {
-            //     resolve(await Shape.GetArea());
-            // }
-
-            resolve(Shape.GetArea());
-
+            if (Shape.radius) {
+                resolve(Math.PI * Math.pow(Shape.radius, 2));
+            } else if (Shape.width && Shape.height) {
+                resolve(parseInt(Shape.width) * parseInt(Shape.height));
+            }
         });
+    }
 
-
-
+    ShowCircleRadius(Shape){
+        return new Promise((resolve, reject)=>{
+            this.circle.setRadius(Shape.radius).then((done)=>{
+                resolve(this.circle.getRadius());
+            });
+        });
     }
 
 }

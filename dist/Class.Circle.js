@@ -5,9 +5,14 @@ class Circle {
     constructor(radius) {
         this.radius = radius;
     }
-    GetArea() {
+    setRadius(radius) {
         return new Promise((resolve, reject) => {
-            resolve(Math.PI * Math.pow(this.radius, 2));
+            resolve(this.radius = radius);
+        });
+    }
+    getRadius() {
+        return new Promise((resolve, reject) => {
+            resolve(this.radius);
         });
     }
 }

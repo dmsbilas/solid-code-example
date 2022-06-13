@@ -6,11 +6,6 @@ class Rectangle {
         this.width = width;
         this.height = height;
     }
-    GetArea() {
-        return new Promise((resolve, reject) => {
-            resolve(this.width * this.height);
-        });
-    }
 }
 exports.Rectangle = Rectangle;
 //# sourceMappingURL=Class.Rectangle.js.map
