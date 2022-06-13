@@ -1,5 +1,6 @@
 export declare class Circle {
     private radius;
     constructor(radius: number);
-    GetArea(): Promise<unknown>;
+    setRadius(radius: any): Promise<unknown>;
+    getRadius(): Promise<unknown>;
 }
