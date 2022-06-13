@@ -18,20 +18,8 @@ class AreaCalculator {
     CalculateArea(Shape) {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
-                if (Shape.radius) {
-                    resolve(Math.PI * Math.pow(Shape.radius, 2));
-                }
-                else if (Shape.width && Shape.height) {
-                    resolve(parseInt(Shape.width) * parseInt(Shape.height));
-                }
+                resolve(Shape.GetArea());
             }));
-        });
-    }
-    ShowCircleRadius(Shape) {
-        return new Promise((resolve, reject) => {
-            this.circle.setRadius(Shape.radius).then((done) => {
-                resolve(this.circle.getRadius());
-            });
         });
     }
 }

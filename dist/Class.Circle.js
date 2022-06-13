@@ -15,6 +15,11 @@ class Circle {
             resolve(this.radius);
         });
     }
+    GetArea() {
+        return new Promise((resolve, reject) => {
+            resolve(Math.PI * Math.pow(this.radius, 2));
+        });
+    }
 }
 exports.Circle = Circle;
 //# sourceMappingURL=Class.Circle.js.map
